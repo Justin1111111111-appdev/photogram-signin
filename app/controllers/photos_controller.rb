@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+  
   def index
     @photos = Photo.all
     render({ :template => "photos/all_photos.html.erb"})
@@ -38,5 +39,5 @@ class PhotosController < ApplicationController
     photo.save
 
     redirect_to("/photos/#{photo.id}")
+    end
   end
-end
