@@ -1,7 +1,8 @@
 class PhotosController < ApplicationController
   
   def index
-    @photos = Photo.all
+    @photos = Photo.all.order({ :image => :asc })
+
     render({ :template => "photos/all_photos.html.erb"})
   end
 
